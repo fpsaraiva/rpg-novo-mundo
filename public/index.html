@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novo Mundo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+  </head>
+  <body class="text-center">
+    <section class="hidden" id="nav-bar">
+      <div class="cover-container w-100 h-100 p3 mx-auto">
+        <header class="masthead mb-auto">
+          <div class="navbar-nav justify-content-center ml-auto nav-flex-icons">
+            <h1 style="text-indent: 0px">Novo Mundo</h1>
+            <div class="nav-item avatar dropdown">
+              <a
+                class="nav-link"
+                id="navbarDropdownMenuLink-saju"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="/assets/image/avatar.png"
+                  class="rounded-circle z-depth-0"
+                  alt="avatar image"
+                  width="35px"
+                />
+              </a>
+
+              <div
+                class="dropdown-menu dropdown-menu-center dropdown"
+                aria-labelledby="navbarDropdownMenuLink-saju"
+              >
+                <a class="nav-link" id="personage">Ficha</a>
+                <a class="nav-link" id="btn-logout">Logout</a>
+              </div>
+            </div>
+          </div>
+          <nav
+            class="nav nav-masthead w-100 justify-content-center"
+            style="background-color: #540b0e"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" id="home"> Home </a>
+              </li>
+              <li class="nav-item dropdown" style="background-color: #540b0e">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="races"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Raças
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-default">
+                  <a class="dropdown-item" id="humans">Humanos</a>
+                  <a class="dropdown-item" id="were">Were</a>
+                  <a class="dropdown-item" id="cyborgs">Cyborgs</a>
+                  <a class="dropdown-item" id="fae">Faes</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="classes"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Classes
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-default">
+                  <a class="dropdown-item" id="mage">Magos</a>
+                  <a class="dropdown-item" id="warrior">Guardas</a>
+                  <a class="dropdown-item" id="mercenary">Mercenários</a>
+                  <a class="dropdown-item" id="bard">Bardos</a>
+                  <a class="dropdown-item" id="berserker">Bárbaros</a>
+                  <a class="dropdown-item" id="paladin">Paladinos</a>
+                  <a class="dropdown-item" id="wizard">Bruxos</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </section>
+    <section id="login">
+      <main role="main" class="inner cover">
+        <div class="container-mt-auto" style="padding-top: 45vh">
+          <div class="container justify-content-center">
+            <h1 class="cover-heading" style="font-weight: bolder">
+              Novo Mundo
+            </h1>
+            <div>
+              <div>
+                <input
+                  class="lead"
+                  id="input-email"
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div>
+                <input
+                  class="lead"
+                  id="input-password"
+                  type="password"
+                  placeholder="Senha"
+                />
+              </div>
+              <button
+                class="btn fixed"
+                style="
+                  background-color: #e09f3e;
+                  color: #9e2a2b;
+                  font-weight: bolder;
+                  border-radius: 25px;
+                  margin-left: 30vh;
+                "
+                id="btn-login"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="justify-content-center hidden" id="text-home">
+      <div class="rol">
+        <div class="col-lg-7 col-sm-10 box justify-content-center text-justify">
+          <p>
+            Em 2021 a magia voltou ao mundo, a tecnologia batalha contra ela com
+            todas as forças, porém, o mundo deve se adaptar. A magia e a
+            técnologia vem e vão como querem, em ondas. Em um momento a magia
+            está em alta, fazendo a técnologia falhar. No outro, a técnologia
+            está em alta.<br />
+          </p>
+          <p>
+            Quando a primeira onda de magia estourou no mundo, muitos humanos
+            morreram, guerrar pela supremacia estouraram e o caos reinos em
+            todos os lugares. Não podia-se mais confiar em celulares,
+            computadores e carros; eles eram falhos. Porém, não se podia confiar
+            na magia, também, pois ninguém controla a magia.
+          </p>
+          <p>
+            Então, durante as últimas centenas de anos, os humanos descobriram
+            que não são a raça predominante no mundo. Os fae estão lá, assim
+            como os were, os bruxos, magos, necromantes e cyborgs. Pequenas
+            guerras entre facções têm estourado pelo mundo.
+          </p>
+          <p>
+            Os Deuses são reais novamente, e é hora de controlar a magia, antes
+            que o mundo seja controlado.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="race-human">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Humanos</h3>
+          <p>
+            Os humanos podem ser magicos ou não magicos. Muitos dos não magicos
+            tornaram-se mediadores entre as raças, ou se juntaram á Ordem.
+          </p>
+          <p>
+            Os magicos se tornaram grandes magos, bruxos, druidas. Dedicam-se à
+            deuses perdidos. Não são nem bons nem maus.
+          </p>
+          <p>
+            Porém, as maçãs podres, aqueles que são profundos nas artes
+            malignas, esses tentam tornar o trabalho da Ordem mais dificil. Eles
+            são versados em necromancia e navegação. Os sussurros da noite falam
+            de um nome, um nome há muito perdido...
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img
+            class="img-fluid"
+            src="/assets/image/human.png"
+            alt="human"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+          <p class="col-6" style="padding-top: 20vh">
+            Os humanos recebem +2 em três atributos de sua escolha. <br />
+            Podem escolher três perícias de dominio.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="race-were">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Were</h3>
+          <p>
+            Os were, podendo ser de quaisquer espécies são extremamente
+            populosos, devido a alta taxa de infecção pelo virus lycan (ou
+            vyrus-L). Eles podem ser humanos transformados pelo virus,
+            hereditario ou por magia
+          </p>
+          <p>
+            Com a alta população eles se juntaram ao Bando, liderados por um rei
+            sem nomes e com muitas leis. São naturalmente resitentes a magia,
+            quanto mais forte for a forma de guerreiro, maior resistência.
+          </p>
+          <p>
+            Aqueles que não pertencem ao Bando são tratados como forasteiros e
+            não são dignos de confiança, porém, aqueles que não seguem ao Código
+            se tornam Ferals.
+          </p>
+          <p>
+            São excelentes guerreiros, paranóicos por natureza. Seus princípios
+            são suas prioridades e a Matilha sempre vem em primeiro lugar.
+          </p>
+          <p>
+            Ferals, são aqueles que são dominados por seus impulsos animais,
+            deixando qualquer humanidade esquecida, são altamente infecciosos e
+            podem atacar qualquer um ou qualquer coisa. São impulsionados
+            únicamente a comer e procriar
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img
+            class="img-fluid"
+            src="/assets/image/were.png"
+            alt="were"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+          <p class="col-5" style="padding-top: 2vh">
+            Os were recebem +2 de força, +2 de constituição e +1 de destreza de
+            atributo. <br />
+            Recebem atletismo, acrobacia e resistência de perícias, porém pode
+            haver mudanças de acordo com a espécie animal.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="race-cyborg">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Cyborgs</h3>
+          <p>
+            Androids que desenvolveram sentimentos humanitários, muitos sendo
+            mais "humanos" que os próprios. Alguns são partes humano e partes
+            robótica.
+          </p>
+          <p>
+            Devido a guerra entre técnologia e magia, os cyborgs precisam ser
+            magicamente protegidos contra as flutoações, caso contrário podem
+            ter problemas de funcionamento nos sistemas.
+          </p>
+          <p>
+            Pouco se sabe sobre seus costumes ou sua forma de evolução. Os
+            cientistas do projeto android abandonaram todos os estudos quando os
+            cyborgs assumiram uma conciência.
+          </p>
+          <p>
+            Possuem a habilidade de se conectar a qualquer conteúdo em rede
+            durantes as ondas de técnologia. Podem hackear extremamente rápido e
+            são excelentes fontes de informações
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img
+            class="img-fluid"
+            src="/assets/image/cyborg.png"
+            alt="were"
+            style="
+              background: transparent;
+              width: 180px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+          <p class="col-5" style="padding-top: 10vh">
+            Os cyborgs recebem +3 em força, +2 em constituição e +4 em
+            inteligencia quando a técnoligia está em alta, +2 quanto a magia
+            está em alta. <br />
+            Recebem resitencia, obter informações, conhecimento de perícias.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="race-fae">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8" style="place-self: center">
+          <h3 class="text-center">Fae</h3>
+          <p>
+            Estavam adormecidos desde a última vez em que a magia dominou o
+            mundo. São criatura que "respiram" a magia. Durante as ondas de
+            tecnologia eles podem ficar sonolentos ou agressivos, dependendo da
+            orientação.
+          </p>
+          <p>
+            São altamente elitistas e fluentes em muitas linguas, além de bons
+            nas artes e grandes estudiosos.
+          </p>
+          <p>Os fae se dividem em reinos:</p>
+        </div>
+        <div
+          id="carousel"
+          class="carousel slide carousel-fade"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner d-flex" role="listbox">
+            <div class="carousel-item active">
+              <div class="view">
+                <img
+                  class="d-block"
+                  src="/assets/image/feéricos.jpg"
+                  alt="feéricos"
+                />
+              </div>
+              <div
+                class="carousel-caption text-justify"
+                style="color: #540b0e; font-weight: bolder"
+              >
+                <h3 class="h3-responsive">Feéricos</h3>
+                <p>
+                  São humanóides, possuem uma segunda pele, que geralmente é um
+                  animal. Sua magia é elemental.
+                </p>
+                <p>
+                  Eles se misturam bem ao mundo atual, mas ainda repudiam a
+                  técnologia.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="view">
+                <img
+                  class="d-block"
+                  src="/assets/image/pequeninos.jpg"
+                  alt="pequeninos"
+                  style="height: 500px"
+                />
+              </div>
+              <div
+                class="carousel-caption text-justify"
+                style="font-weight: bolder; color: #e09f3e"
+              >
+                <h3 class="h3-responsive">Os pequeninos</h3>
+                <p>
+                  São considerados por alguns féericos como inferiores e por
+                  outros como a essencia da magia. Eles vivem escondidos nas
+                  florestas e suas aparencias são diversas.
+                </p>
+                <p>
+                  Eles são otimos espiões devido ao tamanho e capacidade de
+                  camuflagem. Sua magia é errática se não utilizada a todo
+                  momento.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="view">
+                <img
+                  class="d-block"
+                  src="/assets/image/mestiços.jpg"
+                  alt="mestiços"
+                  style="width: 350px; height: 600px"
+                />
+              </div>
+              <div
+                class="carousel-caption text-justify"
+                style="font-weight: bolder; color: #fff3b0"
+              >
+                <h3 class="h3-responsive">Mestiços</h3>
+                <p>
+                  São considerados ímpuros e sua magica é consideravelmente
+                  diluida.
+                </p>
+                <p>
+                  Os efeitos das técnologia não são tão fortes neles, podendo
+                  ter descendencia fae, were, humana ou cyborg. Eles criaram a
+                  própria comunidade por não se encaixarem em lugar algum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img
+            class="img-fluid"
+            src="/assets/image/fae.png"
+            alt="fae"
+            style="
+              background: transparent;
+              width: 180px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+          <p class="col-6" style="padding-top: 20vh">
+            Os fae recebem +2 em sabedoria, +2 em destreza e +1 em força. <br />
+            Recebem natureza, acrobacia, conhecimento e atletismo de perícias.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="races-classes hidden" id="class-mage">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Magos</h3>
+          <p>
+            Magos são pessoas que nasceram com dons ou treinaram para
+            adquiri-los. Usam uma variedade imensa de magias que abrangem de
+            tudo um pouco, a maioria sendo de natureza elementar, sendo elas
+            portanto, usadas para atacar seus oponentes de diversas maneiras.
+          </p>
+          <p>
+            Quando a magia está em alta podem ser grandes guerreiros ou
+            curadores, porém, com a magia em baixa podem ser vulneráveis a
+            quaisquer ataques.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 10vh">
+            Os magos recebem +3 em inteligência e +2 em sabedoria de atributos.
+            <br />
+            Têm arconismo e natureza de perícias. <br />
+            E começam a aventura com um cajado ou cetro.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/mage.png"
+            alt="magos"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-warrior">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Guardas</h3>
+          <p>
+            O Guarda ou Espadachim faz a justiça com as próprias mãos, mas
+            sempre com piedade, tem uma imensidão de habilidades com espadas, os
+            espadachins usam de sua sagacidade e agilidade – e uma pitada de
+            loucura – para abrir seu caminho na vida. portanto, usadas para
+            atacar seus oponentes de diversas maneiras.
+          </p>
+          <p>
+            Suas técnicas de luta, ensinadas por um mestre em esgrima e artes
+            marciais ou aprendidas de forma autodidata costumam surpreender os
+            mais valiosos guerreiros e bárbaros por sua agilidade e eficácia.
+          </p>
+          <p>
+            Um espadachim considera o uso de grandes armas e armaduras um ato
+            primitivo e deveras deselegante; a nova era clama por guerreiros
+            mais refinados do que brutamontes desmiolados e homens-das-cavernas
+            caóticos.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 10vh">
+            Os guardas recebem +2 em força, +2 em constituição e +2 em destreza
+            de atributos.
+            <br />
+            Têm agilidade, atletismo e resistência de perícias. <br />
+            E começam a aventura com uma espada e armadura leves.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/guarda.png"
+            alt="guardas"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-mercenary">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Mercenários</h3>
+          <p>
+            Grandes estudiosos da arte da morte silenciosa, Mercenários se
+            orgulham de dominar as técnicas da luta com adagas e luta
+            corpo-a-corpo.
+          </p>
+          <p>
+            Muitos também são mestres em enganar seus oponentes com truques de
+            camuflagem e se tornam mortíferos ao utilizarem suas habilidades
+            contra os inimigos, priorizam sua velocidade e agilidade nos
+            confrontos, por isso preferem trajar armaduras leves.
+          </p>
+          <p>
+            Eles pegam qualquer tipo de trabalho, desde roubo até assassinatos.
+            Sua lealdade é a si mesmo... Ou a quem pagar mais.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 10vh">
+            Os mercenários recebem +2 em força, +2 em carisma e +2 em destreza
+            de atributos.
+            <br />
+            Têm agilidade, atletismo, ladinagem, furtiividade e sobrevivência de
+            perícias. <br />
+            E começam a aventura com um par de adagas, uma arma de fogo e uma
+            armadura leve.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/mercenario.png"
+            alt="mercenários"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-bard">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Bardos</h3>
+          <p>
+            Os Bardos aprendem usar a sua música como arma através da magia
+            transformando seus instrumentos em objetos mágicos mágicos.
+          </p>
+          <p>
+            Normalmente os jogadores escolhem Alaudes como arma/instrumento que
+            usarão no decorrer da história mas isso não quer dizer, que não
+            possam escolher outros instrumentos.(Mas por favor não vá me pedir
+            uma guitarra elétrica...).
+          </p>
+          <p>
+            Os Bardos também pode fazer ótimas incensações como atores, podendo
+            disfarçar a voz, ou até mesmo fazerem disfarces improvisados pois o
+            seu maior pré-requisito é ser muito criativo em qualquer situação.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 10vh">
+            Os mercenários recebem +2 em inteligência e +4 em carisma de
+            atributos.
+            <br />
+            Têm agilidade, diplomacia, enganação, obter informação, furtividade
+            e atuação de perícias. <br />
+            E começam a aventura com um par de adagas e um instrumento de sua
+            escolha.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/bardo.png"
+            alt="bardos"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-berserker">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Bárbaros</h3>
+          <p>
+            A Classe Guerreira, é lembrada e cultuada pela sua enorme força e
+            agressividade dentro dos campos de batalha.
+          </p>
+          <p>
+            São famosos por lutarem sem armaduras, utilizando apenas machados e
+            se atirando ferozmente para cima de qualquer oponente.
+          </p>
+          <p>
+            Entram em estados de fúria letal quando estão nos campos de
+            batalhas, esta fúria permite o Berserker lute por mais tempo e bata
+            com mais força por mais tempo que o normal, enquanto recebe os
+            golpes de seus inimigos como se fossem levem carícias. A Fúria de um
+            Berserker é quando o mesmo canaliza sua fúria interior com o único
+            propósito de matar.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 5vh">
+            Os bárbaros recebem -2 em inteligência, +4 em força, +2 em carisma e
+            +2 em constituição de atributos.
+            <br />
+            Têm intimidação, atletismo, adestrar animais e iniciativa de
+            perícias. <br />
+            E começam a aventura com uma arma de fogo, uma arma pesada e um item
+            pessoal de recordação da sua humanidade.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/barbaro.png"
+            alt="barbaros"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-paladin">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Paladino</h3>
+          <p>São os campeões da Justiça, bondade e Lealdade.</p>
+          <p>
+            Possuem habilidades de combate como a de um guerreiro juntamente com
+            a força de um Berserker, e prestam a devoção aos deuses, obtendo
+            assim o poder necessário para conjurar suas magias(assim como um
+            Clérigo). Mas diferente de um Clérigo um Paladino nunca poderia
+            servir á um Deus maligno.
+          </p>
+          <p>
+            Um guerreiro santo que promove o bem. Possui poderosas habilidades
+            combativas, tal qual o guerreiro, e algumas mágicas, tal qual ao do
+            Clérigo.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 5vh">
+            Os paladinos recebem +4 em força, +2 em sabedoria,+2 em carisma e +3
+            em constituição de atributos.
+            <br />
+            Têm atletismo, iniciativa, diplomacia, cura, percepção e intuição de
+            perícias. <br />
+            E começam a aventura com um sabre, uma armadura pesada e um escudo.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/paladino.png"
+            alt="paladinos"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+    <section class="races-classes hidden" id="class-wizard">
+      <div class="row justify-content-center text-justify align-middle">
+        <div class="col-lg-7 col-sm-8">
+          <h3 class="text-center">Bruxos</h3>
+          <p>
+            Os bruxos canalizam o poder arcano retirado de entidades
+            primordiais. Eles comungam com inteligências abissais e espíritos
+            feéricos, alvejam os inimigos com poderosas ra­jadas de poder
+            místico e confundem os oponentes com maldições execradoras. Armados
+            com segredos esotéricos e conhecimentos perigosos, os bruxos são
+            adversários sa­gazes e versáteis.
+          </p>
+          <p>
+            Os bruxos têm uma excelente habilidade com os ataques à distância de
+            curto alcance e seus poderes da classe confundem ou enfraquecem os
+            oponentes. Um bruxo é capaz de alternar com facilidade entre ataques
+            à distância e corpo a corpo. Entretanto, eles não são muito
+            resistentes e confiam em poderes de evasão e ocultação para evitar
+            os golpes inimigos.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="col-6" style="padding-top: 5vh">
+            Os bruxos recebem +2 em força, +4 em sabedoria e +2 em carisma de
+            atributos.
+            <br />
+            Têm arcanismo, blefe, história, religião, ladinagem e intuição de
+            perícias. <br />
+            E começam a aventura com uma adaga, um grimório e um item arcano.
+          </p>
+          <img
+            class="img-fluid"
+            src="/assets/image/bruxo.png"
+            alt="bruxos"
+            style="
+              background: transparent;
+              width: 160px;
+              height: 270px;
+              align-self: center;
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="hidden row justify-content-center text-center"
+      id="characterSheet"
+    >
+      <div class="box" style="width: 66%">
+        <form class="col">
+          <div class="form-group">
+            <input
+              type="text"
+              id="inputName"
+              placeholder="Nome do Personagem"
+            />
+          </div>
+          <div class="justify-content-center">
+            <div class="form-group d-flex">
+              <select class="form-control form" id="inputRace">
+                <option value="Raça do Personagem" disabled>
+                  Raça do Personagem
+                </option>
+                <option value="Humanos">Humanos</option>
+                <option value="Were">Were</option>
+                <option value="Cyborgs">Cyborgs</option>
+                <option value="Faes">Faes</option>
+              </select>
+              <select class="form-control form" id="inputClass">
+                <option value="Classe do Personagem" disabled>
+                  Classe do Personagem
+                </option>
+                <option value="Magos">Magos</option>
+                <option value="Guardas">Guardas</option>
+                <option value="Mercenários">Mercenários</option>
+                <option value="Bardos">Bardos</option>
+                <option value="Bárbaros">Bárbaros</option>
+                <option value="Paladinos">Paladinos</option>
+                <option value="Bruxos">Bruxos</option>
+              </select>
+            </div>
+            <div class="justify-content-center row mb-3">
+              <div class="form-group">
+                <label for="inputForce">Força</label>
+                <select class="form-control form form-atributs" id="inputForce">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputSkill">Destreza</label>
+                <select class="form-control form form-atributs" id="inputSkill">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputInteligence">Inteligência</label>
+                <select
+                  class="form-control form form-atributs"
+                  id="inputInteligence"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputWisdom">Sabedoria</label>
+                <select
+                  class="form-control form form-atributs"
+                  id="inputWisdom"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputConstitution">Constituição</label>
+                <select
+                  class="form-control form form-atributs"
+                  id="inputConstitution"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputCharisma">Carisma</label>
+                <select
+                  class="form-control form form-atributs"
+                  id="inputCharisma"
+                >
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn"
+              id="btn-save"
+              style="background-color: #e09f3e"
+            >
+              Criar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div id="sheets-list" class="row"></div>
+      </div>
+    </section>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        Produced by Fernando Saraiva e Thielly Langer - 3ª Edição - 2020
+      </div>
+    </footer>
+    <script src="./bundle.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

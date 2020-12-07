@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@1&display=swap");
+
+html,
+body {
+  font-family: "IM Fell Great Primer", serif;
+  background-color: #fff3b0;
+  color: #335c67;
+}
+input {
+  outline: none;
+  border-radius: 35px;
+  margin: 5px;
+  text-indent: 10px;
+  font-style: italic;
+  color: #540b0e;
+}
+a {
+  color: #e09f3e;
+}
+a:hover {
+  color: #e09f3e;
+}
+
+.hidden {
+  display: none;
+}
+
+#login {
+  background-image: url(/assets/image/portal-do-bibliotecario-rpg-biblioteca.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: space;
+  height: 100vh;
+  justify-content: center;
+}
+::placeholder {
+  color: #540b0e;
+}
+
+.box {
+  width: 80%;
+  background-color: #fff3b0;
+  border-radius: 30px;
+  margin: auto;
+  text-indent: 2em;
+  padding: 30px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#text-home {
+  background-image: url(/assets/image/back.png);
+  display: none;
+}
+.races-classes {
+  background-image: url(/assets/image/back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: space;
+  padding: 30px;
+  text-indent: 2em;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.navbar-nav {
+  flex-direction: row;
+  text-indent: 3rem;
+  font-size: larger;
+}
+.dropdown-menu {
+  border-radius: 20px;
+  background-color: #540b0e;
+  min-width: 5rem;
+  opacity: 95%;
+  text-indent: 1em;
+}
+.dropdown-item {
+  color: #e09f3e;
+  padding: 0.25rem 0.5rem;
+}
+#characterSheet {
+  background-image: url(/assets/image/back.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: space;
+}
+.atributs {
+  width: 50px;
+}
+.box-sheet {
+  width: 95%;
+  padding: 10px;
+}
+.card {
+  border-radius: 20px;
+  background-color: #fff3b0;
+  line-height: normal;
+}
+.form {
+  outline: none;
+  border-radius: 35px;
+  margin: 5px;
+  text-indent: 10px;
+  width: 10em;
+  color: #540b0e;
+}
+.form-atributs {
+  width: 5em;
+}
+label {
+  text-indent: 0;
+}
